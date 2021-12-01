@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintDayInWord", "PrintDayI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintDayInWord_2", "PrintDayInWord_2\PrintDayInWord_2.csproj", "{BEFA9958-68C0-4611-9EA9-4562B71CD2DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{603DBEC6-3E02-4B93-9558-140B2188A2BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BEFA9958-68C0-4611-9EA9-4562B71CD2DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEFA9958-68C0-4611-9EA9-4562B71CD2DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEFA9958-68C0-4611-9EA9-4562B71CD2DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{603DBEC6-3E02-4B93-9558-140B2188A2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{603DBEC6-3E02-4B93-9558-140B2188A2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{603DBEC6-3E02-4B93-9558-140B2188A2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{603DBEC6-3E02-4B93-9558-140B2188A2BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
