@@ -36,7 +36,7 @@ namespace PrintDayInWord
             {
                 Console.WriteLine("Sunday");
             }
-            if (dayNumer > 8)
+            else
             {
                 Console.WriteLine("Not a valid day");
             }
