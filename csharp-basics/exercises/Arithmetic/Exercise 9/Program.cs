@@ -16,11 +16,15 @@ namespace Exercise_9
             Console.WriteLine("Please, write your height");
             height = double.Parse(Console.ReadLine());
 
-            BMI = weight / (height * height);
+            BMI = (weight * 703) / (height * height);
 
-            if (BMI < 18.5)
+            if (18.5 < BMI && BMI < 25)
             {
-                Console.WriteLine("Your BMI category is : Starvation," + "but you are so beautiful!");
+                Console.WriteLine("Your BMI category is : Healthy Weight,");
+            }
+            else if (BMI < 18.5)
+            {
+                Console.WriteLine("Your BMI category is : Underweight," + "but you are so beautiful");
             }
             else if (BMI > 25)
             {
