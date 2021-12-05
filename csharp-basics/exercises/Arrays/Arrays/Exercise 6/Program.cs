@@ -10,26 +10,26 @@ namespace Exercise_6
     {
         static void Main(string[] args)
         {
-            int[] Array1 = new int[10];
-            int[] Array2 = new int[Array1.Length];
+            int[] array1 = new int[10];
+            int[] array2 = new int[array1.Length];
             Random r = new Random();
 
-            for (int i = 0; i < Array1.Length; i++)
+            for (int i = 0; i < array1.Length; i++)
             {
-                Array1[i] = r.Next(10);
+                array1[i] = r.Next(10);
             }
-            for (int i = 0; i < Array2.Length; i++)
+            for (int i = 0; i < array2.Length; i++)
             {
-                Array2[i] = Array1[i];
+                array2[i] = array1[i];
             }
-            Array1[9] = -7;
-            for (int i = 0; i < Array1.Length; i++)
+            array1[9] = -7;
+            for (int i = 0; i < array1.Length; i++)
             {
-                Console.WriteLine("Array 1:" + Array1[i]);
+                Console.WriteLine("Array 1:" + array1[i]);
             }
-            for (int i = 0; i < Array1.Length; i++)
+            for (int i = 0; i < array1.Length; i++)
             {
-                Console.WriteLine("Array 2: " + Array2[i]);
+                Console.WriteLine("Array 2: " + array2[i]);
             }
         }
     }
