@@ -15,14 +15,14 @@ namespace Exercise5
 
             var indexOfElement36 = 36;
             var indexOfElement29 = 29;
-          
+
             for (int i = 0; i < myArray.Length; i++)
             {
-              if (myArray[i] == indexOfElement36)
+                if (myArray[i] == indexOfElement36)
                 {
                     indexOfElement36 = i;
                 }
-              if (myArray[i] == indexOfElement29)
+                if (myArray[i] == indexOfElement29)
                 {
                     indexOfElement29 = i;
                 }
