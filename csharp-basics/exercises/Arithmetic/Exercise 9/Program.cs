@@ -18,7 +18,7 @@ namespace Exercise_9
 
             BMI = (weight * 703) / (height * height);
 
-            if (18.5 < BMI && BMI < 25)
+            if (18.5 <= BMI && BMI <= 25)
             {
                 Console.WriteLine("Your BMI category is : Healthy Weight,");
             }
