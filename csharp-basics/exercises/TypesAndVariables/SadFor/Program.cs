@@ -6,10 +6,10 @@ namespace SadFor
     {
         private static void Main(string[] args)
         {
-            Test1();
+            Test();
         }
 
-        private static void Test1()
+        private static void Test()
         {
             int i;
             for (i = 0; i < 10; i++)

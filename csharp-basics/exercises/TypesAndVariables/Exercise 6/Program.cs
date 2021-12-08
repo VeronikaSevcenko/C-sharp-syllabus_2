@@ -6,16 +6,16 @@ namespace Exercise_6
     {
         static void Main(string[] args)
         {
-            int a;
+            int n;
             int Sum = 0;
 
             Console.WriteLine("Enter a single digit number");
-            a = int.Parse(Console.ReadLine());
+            n = int.Parse(Console.ReadLine());
 
-            while (a > 0)
+            while (n > 0)
             {
-                Sum += a % 10;
-                a /= 10;
+                Sum += n % 10;
+                n /= 10;
 
                 Console.WriteLine("Sum of all the numbers: " + Sum);
                 Console.ReadLine();
