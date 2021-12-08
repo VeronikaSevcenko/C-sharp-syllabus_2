@@ -7,21 +7,17 @@
         {
             char[] vowels = {'a', 'e', 'i', 'o', 'u'};
 
-            /*
-            todo - use for
-            for (?) 
+            for (int i = 0; i < vowels.Length; i++)
             {
-                Console.WriteLine(vowels[i]);
+                System.Console.WriteLine(vowels[i]);
+                System.Console.WriteLine();
             }
-            */
 
-            /*
-            todo - use foreach
-            for (?) 
+            foreach (var element in vowels)
             {
-                Console.WriteLine(vowel);
+                System.Console.WriteLine($"{element}");
+                System.Console.WriteLine();
             }
-            */
         }
     }
 }
