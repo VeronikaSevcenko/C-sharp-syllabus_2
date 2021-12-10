@@ -13,15 +13,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise4", "Exercise4\Exer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{6E5E8B39-8CFE-4C97-88D7-6EF558EBA8E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 3", "Exercise 3\Exercise 3.csproj", "{19ECF70E-4120-49CF-A078-77D2D798A98E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 3", "Exercise 3\Exercise 3.csproj", "{19ECF70E-4120-49CF-A078-77D2D798A98E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{9F995881-7123-437B-8376-25ADD8E88B27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{9F995881-7123-437B-8376-25ADD8E88B27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiFigure", "Exercise 8\AsciiFigure.csproj", "{984C4F4C-0105-40C0-B405-CC7F99E77415}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiFigure", "Exercise 8\AsciiFigure.csproj", "{984C4F4C-0105-40C0-B405-CC7F99E77415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollTwoDice", "RollTwoDice\RollTwoDice.csproj", "{424364FE-0CBD-4990-B1D0-1093FD5C412E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RollTwoDice", "RollTwoDice\RollTwoDice.csproj", "{424364FE-0CBD-4990-B1D0-1093FD5C412E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberSquare", "NumberSquare\NumberSquare.csproj", "{4AD95CE4-31FD-4C2A-8428-F369A0876F6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberSquare", "NumberSquare\NumberSquare.csproj", "{4AD95CE4-31FD-4C2A-8428-F369A0876F6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 6", "Exercise 6\Exercise 6.csproj", "{80A0961A-31F4-4D83-81B5-D33F2D028B65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{4AD95CE4-31FD-4C2A-8428-F369A0876F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AD95CE4-31FD-4C2A-8428-F369A0876F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AD95CE4-31FD-4C2A-8428-F369A0876F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A0961A-31F4-4D83-81B5-D33F2D028B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A0961A-31F4-4D83-81B5-D33F2D028B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A0961A-31F4-4D83-81B5-D33F2D028B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A0961A-31F4-4D83-81B5-D33F2D028B65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
