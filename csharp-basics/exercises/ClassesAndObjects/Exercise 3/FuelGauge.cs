@@ -6,7 +6,7 @@ namespace Exercise_3
 {
     class FuelGauge
     {
-        public  int MaxLitr = 70;
+       public int MaxLitr = 70;
 
         private int Litr;
 

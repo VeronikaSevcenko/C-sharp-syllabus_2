@@ -6,7 +6,7 @@ namespace Exercise_3
 {
     class Odometer
     {
-        int MaxMileage = 999999;
+        public int MaxMileage = 999999;
 
         private int Mileage;
 
@@ -39,7 +39,7 @@ namespace Exercise_3
                 Mileage = 0;
             }
 
-            int driving = OriginalMileaeg - Mileage;
+            var driving = OriginalMileaeg - Mileage;
             {
                 if(driving % MPG == 0)
                 {
