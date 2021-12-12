@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Exercise_6
 {
@@ -6,20 +7,15 @@ namespace Exercise_6
     {
         static void Main(string[] args)
         {
-            int n;
-            int Sum = 0;
+            Console.WriteLine("Enter single numbers series an between number please put ',' For example:9,3 or 5,3,1 ");
 
-            Console.WriteLine("Enter a single digit number");
-            n = int.Parse(Console.ReadLine());
+            string numbers = Console.ReadLine();
+            
+            int[] converted = numbers.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
+            Console.WriteLine();
 
-            while (n > 0)
-            {
-                Sum += n % 10;
-                n /= 10;
-
-                Console.WriteLine("Sum of all the numbers: " + Sum);
-                Console.ReadLine();
-            }
+            int Sum = converted.Sum();
+            Console.WriteLine("The sum of all the numbers is : {0}", Sum);
         }
     }
 }
