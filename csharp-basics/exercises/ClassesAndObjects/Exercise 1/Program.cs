@@ -37,7 +37,6 @@ namespace Exercise_1
        
         class MainClass
         {
-
             public static void Main(string[] args)
             {
                 Product product1 = new Product("", 1, 1);

@@ -14,7 +14,6 @@ namespace Exercise_3
         {
             Litr = 0;
         }
-
         public FuelGauge(int Litr)
         {
             if (Litr <= MaxLitr)

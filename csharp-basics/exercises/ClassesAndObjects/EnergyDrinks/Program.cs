@@ -21,7 +21,6 @@ namespace EnergyDrinks
              Console.WriteLine("Approximately " + energyDrinkers + " bought at least one energy drink");
              Console.WriteLine(preferCitrus + " of those " + "prefer citrus flavored energy drinks.");
         }
-
         public static double CalculateEnergyDrinkers(int numberSurveyed)
         {
             return numberSurveyed * PurchasedEnergyDrinks;

@@ -19,6 +19,7 @@ namespace Exercise_3
                 {
                     fuel.AddLitr();
                 }
+
                 while (fuel.GetLitr() > 0)
                 {
                     odometer.AddMileage();
