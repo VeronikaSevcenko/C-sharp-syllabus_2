@@ -8,25 +8,53 @@ namespace Exercise1
 {
     class Program
     {
-        /**
-           * Origination:
-           * Audi -> Germany
-           * BMW -> Germany
-           * Honda -> Japan
-           * Mercedes -> Germany
-           * VolksWagen -> Germany
-           * Tesla -> USA
-           */
-
         private static void Main(string[] args)
         {
-            string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
+            List<string> array = new List<string>();
+            array.Add("Audi");
+            array.Add("BMW");
+            array.Add("Honda");
+            array.Add("Mercedes-Benz");
+            array.Add("VolksWagen");
+            array.Add("Mercedes-Benz");
+            array.Add("Tesla");
 
-            //todo - replace array with an List and print out the results
+            foreach (var result in array)
+            {
+                Console.WriteLine(result);
+            }
 
-            //todo - replace array with a HashSet and print out the results
+            Console.WriteLine();
 
-            //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+            HashSet<string> array2 = new HashSet<string>()
+            {
+                "Audi",
+                "BMW",
+                "Honda",
+                "Mercedes-Benz",
+                "VolksWagen",
+                "Mercedes-Benz",
+                "Tesla"
+            };
+            foreach (var result in array2)
+            {
+                Console.WriteLine(result);
+            }
+
+            Console.WriteLine();
+
+            Dictionary<string,string> array3 = new Dictionary<string, string>()
+            {
+                { "Audi", "Germany"},
+                { "BMW", "Germany"},
+                { "Honda", "Japan" },
+                { "Mercedes-Benz", "Germany"},
+                { "VolksWagen", "Germany" },
+                { "Tesla", "USA" },
+            };
+
+            foreach (var result in array3) 
+            Console.WriteLine("{0} -> {1}",result.Key, result.Value);
         }
     }
 }
