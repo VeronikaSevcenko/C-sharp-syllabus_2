@@ -16,23 +16,23 @@ namespace ListExercise9
                 "Green",
                 "Black",
                 "White",
-                "Pink"
+                "Brown",
             };
-
-            Console.WriteLine(string.Join(",", firstList));
 
             var secondList = new List<string>
             {
-                "Red",
-                "Green",
-                "Black",
-                "White",
-                "Pink"
+                "Yellow",
+                "Purpule",
+                "Pink",
+                "Lime",
+                "Rose",
             };
 
-            Console.WriteLine(string.Join(",", secondList));
-            //TODO: Write a C# program to join two lists.
-            //...
+            var newList = firstList.Union(secondList);
+
+            Console.Write(string.Join(",", newList));
+
+            Console.ReadKey();
         }
     }
 }

@@ -10,19 +10,54 @@ namespace ListExercise11
     {
         static void Main(string[] args)
         {
-            //TODO: Create an List with string elements
+            var emotions = new List<string>
+            {
+                "Smile",
+                "Loving",
+                "Happiness",
+                "Anger",
+                "Hesitant",
+                "Glad",
+                "Joyful",
+                "Upset",
+                "Frustrated",
+                "Playful",
+            };
+            emotions.Insert(5, "Angry");
 
-            //TODO: Add 10 values to list
+            Console.WriteLine(string.Join(",", emotions));
+            Console.WriteLine();
 
-            //TODO: Add new value at 5th position
+            int index = emotions.FindIndex(s => s == "Playful");
+            if (index != -1)
+            {
+                emotions[index] = "Delighed";
+            }
+            Console.WriteLine(string.Join(",", emotions));
+            Console.WriteLine();
 
-            //TODO: Change value at last position (Calculate last position programmatically)
+            var lastItem = emotions.Last();
 
-            //TODO: Sort your list in alphabetical order
+            Console.Write("Last position :" + " " + lastItem);
+            Console.WriteLine();
 
-            //TODO: Check if your list contains "Foobar" element
+            Console.WriteLine("List in alphabetical order : ");
+            emotions.Sort();
+            for (int i = 0; i < emotions.Count; i++)
+            {
+                Console.WriteLine("\t"+emotions[i]);
+            }
 
-            //TODO: Print each element of list using loop
+            Console.WriteLine("My list contains word 'Foobar' ?");
+            Console.WriteLine(emotions.Contains("White"));
+            Console.WriteLine();
+
+            Console.WriteLine("Print each element of list using loop: ");
+
+            foreach (var emotion in emotions)
+            {
+                Console.WriteLine("\t{0}",emotion);
+            }
         }
     }
 }
