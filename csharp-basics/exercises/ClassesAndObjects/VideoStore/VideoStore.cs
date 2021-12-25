@@ -19,11 +19,11 @@ namespace VideoStore
         
         public void Checkout(string title)
         {
-            foreach (var item in _VideoList)
+            foreach (var Video in _VideoList)
             {
-                if (item.Title == title)
+                if (Video.Title == title)
                 {
-                    item.BeingCheckedOut();
+                    Video.BeingCheckedOut();
                     break;
                 }
             }

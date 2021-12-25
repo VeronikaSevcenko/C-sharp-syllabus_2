@@ -4,7 +4,7 @@ namespace Exercsie_8
 {
     class SavingsAccount
     {
-        private double balance;
+        private double _balance;
         private double withdraw;
         private double deposit;
         private double interestRate;
@@ -14,14 +14,14 @@ namespace Exercsie_8
 
         public SavingsAccount(double startBalance, double inteRate)
         {
-            balance = startBalance;
+            _balance = startBalance;
             interestRate = inteRate;
             interest = 0.00;
         }
 
         public double GetBalance()
         {
-            return balance;
+            return _balance;
         }
 
         public void GetDeposit(double depositAmount)
@@ -31,7 +31,7 @@ namespace Exercsie_8
 
         public void AddDeposit()
         {
-            balance = (balance + deposit);
+            _balance = (_balance + deposit);
         }
 
         public void SetWithdraw(double withdrawAmount)
@@ -41,7 +41,7 @@ namespace Exercsie_8
 
         public void subtractWithdraw()
         {
-            balance = (balance - withdraw);
+            _balance = (_balance - withdraw);
         }
 
         public double GetInterestRate()
@@ -52,12 +52,12 @@ namespace Exercsie_8
         public void CalculateInterest()
         {
             interest = (interestRate / 12);
-            interest = (balance * interest);
+            interest = (_balance * interest);
         }
 
         public void AddInterest()
         {
-            balance = (balance + interest);
+            _balance = (_balance + interest);
         }
 
         public double GetInterest()

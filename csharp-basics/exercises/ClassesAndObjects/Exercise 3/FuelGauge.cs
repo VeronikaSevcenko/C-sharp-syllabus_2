@@ -8,44 +8,47 @@ namespace Exercise_3
     {
        public int MaxLitr = 70;
 
-        private int Litr;
+        private int _Litr;
 
         public FuelGauge()
         {
-            Litr = 0;
+            _Litr = 0;
         }
+
         public FuelGauge(int Litr)
         {
             if (Litr <= MaxLitr)
             {
-                this.Litr = Litr;
+                this._Litr = Litr;
             }
             else
             {
                 Litr = MaxLitr;
             }
         }
+
         public int GetLitr()
         {
-            return Litr;
+            return _Litr;
         }
 
         public void AddLitr()
         {
-            if (Litr < MaxLitr)
+            if (_Litr < MaxLitr)
             {
-                Litr++;
+                _Litr++;
             }
             else
             {
                 Console.WriteLine("It's Full");
             }
         }
+
         public void Burn()
         {
-            if (Litr > 0)
+            if (_Litr > 0)
             {
-                Litr--;
+                _Litr--;
             }
             else
             {

@@ -27,6 +27,7 @@ namespace Exercise_3
         {
             return Mileage;
         }
+
         public void AddMileage()
         {
             if (Mileage < MaxMileage)

@@ -14,9 +14,10 @@ namespace Exercise_5
             _month = month;
             _day = day;
         }
-        public void MothDate(int month)
+        public int Month
         {
-            _month = month;
+            get { return _month; }
+            set { _month = value; }
         }
         public int GetMothDate()
         {
@@ -41,26 +42,6 @@ namespace Exercise_5
         public void DisplayDate()
         {
             Console.WriteLine($"{_year}/{_month}/{_day}");
-        }
-    }
-    class DayTest
-    {
-        static void Main(string[] args)
-        {
-            Date myDate = new Date(2, 11, 1995);
-
-            Console.WriteLine("Enter the day");
-            int myDay = int.Parse(Console.ReadLine());
-            myDate.DayDate(myDay);
-
-            Console.WriteLine("Enter the month");
-            int myMonth = int.Parse(Console.ReadLine());
-            myDate.DayDate(myMonth);
-
-            Console.WriteLine("Enter the year");
-            int myYear = int.Parse(Console.ReadLine());
-            myDate.DayDate(myYear);
-            myDate.DisplayDate();
         }
     }
 }
