@@ -19,6 +19,7 @@ namespace Exercise_7
             score = 0;
             rnd = new Random();
         }
+
         public Roll Roll(int LastScore)
         {
             Roll roll = new Roll();
@@ -34,6 +35,7 @@ namespace Exercise_7
             roll.Continue = true;
             return roll;
         }
+
         public void Result(Roll roll)
         {
             score += roll.TotalScore;
@@ -51,10 +53,7 @@ namespace Exercise_7
             {
                 Console.WriteLine("Welcome to Piglet!");
                 Console.WriteLine("You would like to play?(y/n)");
-
                 Console.WriteLine();
-
-
 
                 if (input.ToLowerInvariant() == "Y")
                 {
@@ -65,7 +64,7 @@ namespace Exercise_7
                     Console.WriteLine("Let's go,player!");
                 }
 
-                while (input == null)
+                while (input == " ")
                 {
                     if (input.ToLowerInvariant() == "y")
                     {

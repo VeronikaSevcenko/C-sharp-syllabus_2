@@ -8,8 +8,8 @@ namespace RollTwoDice
         {
             int Sum;
             Random rnd = new Random();
-            int desired1 = rnd.Next(6) + 1;
-            int desired2 = rnd.Next(6) + 1;
+            int desired1 = rnd.Next(7);
+            int desired2 = rnd.Next(7);
             int SumOfTheTwoDice = desired1 + desired2;
             int count = 0;
 
@@ -19,8 +19,8 @@ namespace RollTwoDice
 
             while (SumOfTheTwoDice != Sum)
             {
-                desired1 = rnd.Next(6) + 1;
-                desired2 = rnd.Next(6) + 1;
+                desired1 = rnd.Next(7);
+                desired2 = rnd.Next(7);
                 SumOfTheTwoDice = desired1 + desired2;
                 count++;
                 Console.WriteLine(desired1 + " and " + desired2 + " = " + SumOfTheTwoDice);

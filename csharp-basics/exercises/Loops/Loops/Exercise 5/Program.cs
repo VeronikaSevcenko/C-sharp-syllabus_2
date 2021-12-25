@@ -20,11 +20,14 @@ namespace Exercise_5
             var line = result.Length;
             int period = 0;
 
-            if (line <= 30) period = 30 - line;
-            var dot = "";
-            for (i = 1; i <= period; i++) dot += ".";
+            if (line <= 30) period = 30 - line; 
             {
-                Console.WriteLine(a + dot + b);
+                var dot = "";
+
+                for (i = 1; i <= period; i++) dot += ".";
+                {
+                    Console.WriteLine(a + dot + b);
+                }
             }
         }
     }

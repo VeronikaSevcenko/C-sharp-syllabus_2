@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Exercise_6
 {
@@ -27,7 +29,12 @@ namespace Exercise_6
                 }
                 else
                 {
-                    Console.Write(i + ((i+ (1-1)) % 20 == 0 ? "\n" : " "));
+                    Console.Write(i + " ");
+                }
+
+                if (i % 20 == 0)
+                {
+                    Console.WriteLine("\n");
                 }
             }
         }

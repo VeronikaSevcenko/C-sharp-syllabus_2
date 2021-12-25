@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Exercise_3
 {
@@ -20,16 +22,9 @@ namespace Exercise_3
 
             Console.WriteLine();
             Console.WriteLine("Which index  of number you want to know?");
-            
-            int z = int.Parse(Console.ReadLine());
-            
-            for (int i = 0; i < 20; i++)
-            {
-                if (numbers[i] == z)
-                {
-                    Console.Write(i + ",");
-                }
-            }
+            int input = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(Array.IndexOf(numbers, input));
         }
     }
 }

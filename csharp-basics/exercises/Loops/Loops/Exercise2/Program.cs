@@ -14,7 +14,7 @@ namespace Exercise2
 
             int result = 1;
 
-            for ( i = 1; i < n; i++)
+            for ( i = 1; i <= n; i++)
             {
                 result *= n;
 
