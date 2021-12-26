@@ -8,18 +8,18 @@ namespace Exercise_3
     {
        public int MaxLitr = 70;
 
-        private int _Litr;
+        private int _litr;
 
         public FuelGauge()
         {
-            _Litr = 0;
+            _litr = 0;
         }
 
         public FuelGauge(int Litr)
         {
             if (Litr <= MaxLitr)
             {
-                this._Litr = Litr;
+                this._litr = Litr;
             }
             else
             {
@@ -29,14 +29,14 @@ namespace Exercise_3
 
         public int GetLitr()
         {
-            return _Litr;
+            return _litr;
         }
 
         public void AddLitr()
         {
-            if (_Litr < MaxLitr)
+            if (_litr < MaxLitr)
             {
-                _Litr++;
+                _litr++;
             }
             else
             {
@@ -46,9 +46,9 @@ namespace Exercise_3
 
         public void Burn()
         {
-            if (_Litr > 0)
+            if (_litr > 0)
             {
-                _Litr--;
+                _litr--;
             }
             else
             {

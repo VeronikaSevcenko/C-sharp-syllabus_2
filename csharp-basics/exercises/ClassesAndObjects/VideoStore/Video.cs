@@ -8,7 +8,7 @@ namespace VideoStore
     {
         public string _title { get; set; }
         public bool checked_out { get; private set; }
-        private List<double> _rating { get; set; }
+        public List<double> _rating { get; set; }
         public Video(string title, double average_user_rating)
         {
             _title = title;

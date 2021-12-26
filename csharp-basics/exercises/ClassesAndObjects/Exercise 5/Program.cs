@@ -14,31 +14,40 @@ namespace Exercise_5
             _month = month;
             _day = day;
         }
+
         public int Month
         {
             get { return _month; }
             set { _month = value; }
         }
+
         public int GetMothDate()
         {
             return _month;
         }
-        public void DayDate(int day)
+
+        public int Day
         {
-            _day = day;
+            get { return _day; }
+            set { _day = value; }
         }
+
         public int GetDayDate()
         {
             return _day;
         }
-        public void YearDate(int year)
+
+        public int Year
         {
-            _year = year;
+            get { return _year; }
+            set { _year = value; }
         }
+
         public int GetYearDate()
         {
             return _year;
         }
+
         public void DisplayDate()
         {
             Console.WriteLine($"{_year}/{_month}/{_day}");

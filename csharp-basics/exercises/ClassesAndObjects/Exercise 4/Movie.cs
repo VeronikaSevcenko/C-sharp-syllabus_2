@@ -11,8 +11,8 @@ namespace Exercise_4
             _title = title;
             _studio = studio;
             Rating = rating;
-
         }
+
         public Movie(string title, string studio)
         {
             _title = title;
@@ -20,8 +20,8 @@ namespace Exercise_4
             Rating = "PG";
         }
 
-        private string _title { get; set; } 
-        private string _studio { get; set; }
+        public string _title { get; set; } 
+        public string _studio { get; set; }
         public string Rating { get; private set; }
 
         public string Display()

@@ -9,24 +9,24 @@ namespace Exercise_1
     class Product
     {
         private string name;
-        private double priceAtStart;
+        private double _priceAtStart;
         private double amountAtStart;
 
         public Product(string Name, double PriceAtStart, int AmountAtStart)
         {
             name = Name;
-            priceAtStart = PriceAtStart;
+            _priceAtStart = PriceAtStart;
             amountAtStart = AmountAtStart;
         }
 
         public void PrintProduct()
         {
-            Console.WriteLine("Name: {0}\nPriceAtStart : {1} EUR\nAmountAtStart: {2} units\n", name, priceAtStart, amountAtStart);
+            Console.WriteLine("Name: {0}\nPriceAtStart : {1} EUR\nAmountAtStart: {2} units\n", name, _priceAtStart, amountAtStart);
         }
 
         public void ChangePrice(double newPrice)
         {
-            priceAtStart = newPrice;
+            _priceAtStart = newPrice;
         }
 
         public void ChangeSmallCount(double newCount)
@@ -55,7 +55,7 @@ namespace Exercise_1
                 product2.ChangePrice(890.00);
                 product2.ChangeSmallCount(2);
                 product2.ChangeBiggCount(1);
-                Console.WriteLine("Name: {0}\nnewPrice: {1} EUR\nnewCount:{2} units", product2.name,product2.priceAtStart,product2.amountAtStart);
+                Console.WriteLine("Name: {0}\nnewPrice: {1} EUR\nnewCount:{2} units", product2.name,product2._priceAtStart,product2.amountAtStart);
             }
         }
     }
