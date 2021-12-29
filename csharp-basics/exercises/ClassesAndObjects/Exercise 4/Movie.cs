@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Exercise_4
+{
+    public class Movie
+    {
+        public Movie(string title, string studio, string rating)
+        {
+            _title = title;
+            _studio = studio;
+            Rating = rating;
+        }
+
+        public Movie(string title, string studio)
+        {
+            _title = title;
+            _studio = studio;
+            Rating = "PG";
+        }
+
+        public string _title { get; set; } 
+        public string _studio { get; set; }
+        public string Rating { get; private set; }
+
+        public string Display()
+        {
+            return $"{_title} {_studio} {Rating}";
+        }
+
+        public override string ToString()
+        {
+            return $"{_title} {_studio} {Rating}";
+        }
+    }
+}
