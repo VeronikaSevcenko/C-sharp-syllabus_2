@@ -1,4 +1,9 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace PhoneBook
 {
@@ -15,7 +20,7 @@ namespace PhoneBook
         private int Find(string name) {
             for (var i = 0; i < _dataCount; i++) 
             {
-                if (_data[i].name.Equals(name)) 
+                if (_data[i]._name.Equals(name)) 
                 {
                     return i;
                 }
@@ -33,7 +38,7 @@ namespace PhoneBook
             } 
             else 
             {
-                return _data[position].number;
+                return _data[position]._number;
             }
         }
 
@@ -47,7 +52,7 @@ namespace PhoneBook
             var i = Find(name);
             if (i >= 0) 
             {
-                _data[i].number = number;
+                _data[i]._number = number;
             }
             else 
             {
@@ -56,8 +61,12 @@ namespace PhoneBook
                     Array.Resize(ref _data, (2 * _data.Length));
                 }
 
-                var newEntry = new PhoneEntry {name = name, number = number}; // Create a new pair.
-                _data[_dataCount] = newEntry;   // Add the new pair to the array.
+                var newEntry = new PhoneEntry("Jorry", "28955674"); 
+                _data[_dataCount] = newEntry;
+                _dataCount++;
+
+                var newEntry2 = new PhoneEntry("Molly", "27955642");
+                _data[_dataCount] = newEntry2;
                 _dataCount++;
             }
         }
