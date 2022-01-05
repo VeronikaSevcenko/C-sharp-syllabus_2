@@ -17,7 +17,6 @@ namespace Animals_and_Food
             animals.Add(animalTiger);
             animals.Add(animalCat);
             animals.Add(animalZebra);
-
             
             Food foodmeat = new Meat(8);
             Food foodvegetable = new Vegetable(3);

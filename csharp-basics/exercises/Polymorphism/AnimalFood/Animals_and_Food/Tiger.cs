@@ -6,11 +6,11 @@ namespace Animals_and_Food
 {
     class Tiger : Felime
     {
-
         public Tiger(string type, string name, double weight, int foodEaten, string location) : base(type, name, weight, foodEaten, location)
         {
 
         }
+
         public override void MakeNoise()
         {
             Console.WriteLine(" ROAAAAAAAAAAAAAAAAAAAR ");

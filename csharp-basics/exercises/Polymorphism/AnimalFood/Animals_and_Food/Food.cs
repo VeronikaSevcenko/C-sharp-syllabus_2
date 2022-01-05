@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Animals_and_Food
 {
-    public abstract class  Food
+    public abstract class Food
     {
         public int _quant;
 
@@ -12,6 +12,5 @@ namespace Animals_and_Food
         {
             _quant = quant;
         }
-
     }
 }

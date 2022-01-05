@@ -20,12 +20,10 @@ namespace Animals_and_Food
 
         public override void Eat(Food food)
         {
-
             _foodEaten += food._quant;
 
             Console.WriteLine(($"{_type} {_name} {_breed} {_weight} {_foodEaten}"));
         }
-
 
         public override void Display()
         {

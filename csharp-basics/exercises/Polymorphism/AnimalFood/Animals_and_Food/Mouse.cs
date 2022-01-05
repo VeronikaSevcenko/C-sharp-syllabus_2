@@ -35,7 +35,5 @@ namespace Animals_and_Food
         {
             Console.WriteLine($"{_type} {_name} {_weight} {_foodEaten}");
         }
-
-
     }
 }

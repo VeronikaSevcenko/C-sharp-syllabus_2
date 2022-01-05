@@ -10,8 +10,7 @@ namespace Animals_and_Food
         protected string _name;
         protected double _weight;
         protected int _foodEaten;
-        
-        
+
         public Animal(string type, string name, double weight, int foodEaten)
         {
             _type = type;
@@ -21,7 +20,7 @@ namespace Animals_and_Food
 
         }
 
-        public virtual  void Eat(Food food)
+        public virtual void Eat(Food food)
         {
             
         }

@@ -5,9 +5,10 @@ using System.Text;
 
 namespace Firm
 {
-    public class  Commission : Hourly
+    public class Commission : Hourly
     {
         private double _totalSales;
+
         public double _commission_rate;
 
         public Commission(string eName, string eAddress, string ePhone, string socSecNumber, double rate, double commission_rate, double hoursWorked) : 
