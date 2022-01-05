@@ -10,7 +10,7 @@ namespace FlightPlanner
 {
     class Program
     {
-        private const string Path = @"C:\Users\37123\Desktop\C-sharp-syllabus_2\csharp-basics\exercises\Collections\FlightPlanner\flights.txt";
+        private const string Path = ("../../flights.txt");
 
         private static void Main(string[] args)
         {

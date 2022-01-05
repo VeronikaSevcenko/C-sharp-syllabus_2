@@ -22,7 +22,8 @@ namespace Exercise_3
                 if (!nameList.Contains(inputName))
                 {
                     nameList.Add(inputName);
-                }else
+                }
+                else
                 {
                     Console.WriteLine("Enter next  Name:");
                     inputName = Console.ReadLine();
