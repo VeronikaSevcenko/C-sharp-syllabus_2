@@ -27,4 +27,11 @@ namespace Exercise_2
             }
         }
     }
+    public class CheckOddNumber
+    {
+        public static bool OddNumber(int a)
+        {
+            return a % 2 == 1;
+        }
+    }
 }

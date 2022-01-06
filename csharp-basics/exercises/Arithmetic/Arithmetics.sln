@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 8", "Exercise 8\Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 9", "Exercise 9\Exercise 9.csproj", "{74295EBC-B13F-4A08-AC78-B1131A47EF61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1.Test", "Exercise1.Test\Exercise1.Test.csproj", "{BD2B1663-F571-477D-886B-70BADC65C641}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise1.Test", "Exercise1.Test\Exercise1.Test.csproj", "{BD2B1663-F571-477D-886B-70BADC65C641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckOddEven.Test", "CheckOddEven.Test\CheckOddEven.Test.csproj", "{1CED8501-D5A4-4411-A03C-52E2E1D198CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{BD2B1663-F571-477D-886B-70BADC65C641}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD2B1663-F571-477D-886B-70BADC65C641}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD2B1663-F571-477D-886B-70BADC65C641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CED8501-D5A4-4411-A03C-52E2E1D198CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CED8501-D5A4-4411-A03C-52E2E1D198CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CED8501-D5A4-4411-A03C-52E2E1D198CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CED8501-D5A4-4411-A03C-52E2E1D198CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
