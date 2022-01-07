@@ -8,22 +8,25 @@ namespace CalculateArea
 {
     public class Geometry
     {
-        public static double AreaOfCircle(double radius)
+        public static double AreaOfCircle(decimal radius)
         {
-            return Math.PI * radius * radius;
+            if (radius < 0)
             throw new NotImplementedException();
+            return Math.Round(Math.PI * Math.Pow((double)radius, 2), 2);
         }
 
-        public static double AreaOfRectangle(double length, double width)
+        public static double AreaOfRectangle(decimal length, decimal width)
         {
-            return length * width;
-            throw new NotImplementedException();
+            if (length < 0 || width < 0)
+                throw new ArgumentException("You entered negative number!");
+            return Math.Round((double)length * (double)width, 2);
         }
 
-        public static double AreaOfTriangle(double ground, double h)
+        public static double AreaOfTriangle(decimal ground, decimal h)
         {
-            return ground * h * 0.5;
-            throw new NotImplementedException();
+            if (ground < 0 || h < 0)
+                throw new ArgumentException("You entered negative number!");
+            return Math.Round((double)ground * (double)h * 0.5, 2);
         }
     }
 }
