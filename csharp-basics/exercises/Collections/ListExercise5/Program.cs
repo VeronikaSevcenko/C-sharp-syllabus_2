@@ -21,7 +21,11 @@ namespace ListExercise5
 
             Console.WriteLine(string.Join(",", colors));
 
-            //TODO: Change the third element with "Yellow"
+            int index = colors.FindIndex(s => s == "White");
+            if(index != -1)
+            {
+                colors[index] = "Yellow";
+            }
 
             Console.WriteLine(string.Join(",", colors));
         }

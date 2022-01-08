@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace ListExercise4
 {
@@ -10,7 +14,6 @@ namespace ListExercise4
     {
         private static void Main(string[] args)
         {
-            // Create a list and add some colors to the list
             var colors = new List<string>
             {
                 "Red",
@@ -19,14 +22,15 @@ namespace ListExercise4
                 "White",
                 "Black"
             };
+            colors.Insert(1, "Pink");
+            colors.Insert(3, "Lime");
 
-            //fixme
-            //string element = ...;
-            //Console.WriteLine("First element: " + element);
+            string element = (string)colors[1];
+            Console.WriteLine("First element: " + element);
 
-            //fixme
-            //element = ...;
-            //Console.WriteLine("Third element: " + element);
+            element = (string)colors[3];
+            Console.WriteLine("Third element: " + element);
+
         }
     }
 }
