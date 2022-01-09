@@ -9,11 +9,11 @@ using System.Text.RegularExpressions;
 
 namespace WordCount
 {
-    class Program
+    public class WordCountLines
     {
         static void Main(string[] args)
         {
-            int countLines = File.ReadAllLines(@"C:\Users\37123\Desktop\C-sharp-syllabus_2\csharp-basics\exercises\Collections\WordCount\lear.txt").Length;
+            string countLines = File.ReadAllText(@"C:\Users\37123\Desktop\C-sharp-syllabus_2\csharp-basics\exercises\Collections\WordCount\lear.txt");
             
             StreamReader file = new StreamReader(@"C:\Users\37123\Desktop\C-sharp-syllabus_2\csharp-basics\exercises\Collections\WordCount\lear.txt");
 
@@ -36,9 +36,17 @@ namespace WordCount
             }
             file.Close();
         
-            Console.WriteLine("Lines = {0} ", +countLines);
+            Console.WriteLine("Lines = {0} ", + Lines.CountLines(countLines));
             Console.WriteLine("Words = {0}", +countWords);
             Console.WriteLine("Chars = {0}", +countChars);
+        }
+    }
+
+    public class Lines
+    {
+        public static int CountLines(string countLines)
+        {
+            return countLines.Split('\n').Length;
         }
     }
 }
