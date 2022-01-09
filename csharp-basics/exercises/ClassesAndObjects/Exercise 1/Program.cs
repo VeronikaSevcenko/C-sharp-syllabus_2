@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise_1
 {
-    class Product
+    public class Product
     {
         private string name;
         private double _priceAtStart;
@@ -19,9 +19,9 @@ namespace Exercise_1
             amountAtStart = AmountAtStart;
         }
 
-        public void PrintProduct()
+        public string PrintProduct()
         {
-            Console.WriteLine("Name: {0}\nPriceAtStart : {1} EUR\nAmountAtStart: {2} units\n", name, _priceAtStart, amountAtStart);
+            return  name + ", " + _priceAtStart + ", " + amountAtStart;
         }
 
         public void ChangePrice(double newPrice)
@@ -29,14 +29,14 @@ namespace Exercise_1
             _priceAtStart = newPrice;
         }
 
-        public void ChangeSmallCount(double newCount)
+        public double ChangeSmallCount(double newCount)
         {
-            amountAtStart -= newCount;
+            return amountAtStart -= newCount;
         }
 
-        public void ChangeBiggCount(double newCount)
+        public double ChangeBiggCount(double newCount)
         {
-            amountAtStart += newCount;
+            return amountAtStart += newCount;
         }
        
         class MainClass
