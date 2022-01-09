@@ -9,18 +9,19 @@ namespace Exercise_5
         static void Main(string[] args)
         {
             Date myDate = new Date(2, 11, 1995);
+            myDate.DisplayDate();
 
             Console.WriteLine("Enter the day");
-            int myDay = int.Parse(Console.ReadLine());
-            myDate.DayDate(myDay);
+            int myDay = Convert.ToInt32(Console.ReadLine());
+            myDate.GetDayDate(myDay);
 
             Console.WriteLine("Enter the month");
-            int myMonth = int.Parse(Console.ReadLine());
-            myDate.DayDate(myMonth);
+            int myMonth = Convert.ToInt32(Console.ReadLine());
+            myDate.GetMothDate(myMonth);
 
             Console.WriteLine("Enter the year");
-            int myYear = int.Parse(Console.ReadLine());
-            myDate.DayDate(myYear);
+            int myYear = Convert.ToInt32(Console.ReadLine());
+            myDate.GetYearDate(myYear);
             myDate.DisplayDate();
         }
     }
