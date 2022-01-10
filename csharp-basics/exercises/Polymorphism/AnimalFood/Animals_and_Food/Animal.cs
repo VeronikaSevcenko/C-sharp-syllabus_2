@@ -20,19 +20,23 @@ namespace Animals_and_Food
 
         }
 
-        public virtual void Eat(Food food)
+        public virtual int Eat(Food food)
         {
-            
+            return GetFood;
         }
 
-        public virtual void MakeNoise()
+        public string GetAnimalType
         {
-            Console.WriteLine(" Animal makes a noise ");
+            get { return _type; }
+            set { _type = value; }
         }
 
-        public virtual void Display()
+        public int GetFood
         {
-            Console.WriteLine($"{_type} {_name} {_weight} {_foodEaten}");
+            get { return _foodEaten; }
+            set { _foodEaten = value; }
         }
+
+        public abstract string MakeNoise();
     }
 }

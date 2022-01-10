@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Animals_and_Food
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -23,10 +23,19 @@ namespace Animals_and_Food
 
             foreach (var animal in animals)
             {
-                animal.Display();
+                animal.ToString();
+                animal.MakeNoise();
+                Console.WriteLine(foodvegetable);
+                animal.Eat(foodvegetable);
+                
+            }
+            foreach (var animal in animals)
+            {
+                animal.ToString();
                 animal.MakeNoise();
                 Console.WriteLine(foodmeat);
                 animal.Eat(foodmeat);
+
             }
         }
     }
