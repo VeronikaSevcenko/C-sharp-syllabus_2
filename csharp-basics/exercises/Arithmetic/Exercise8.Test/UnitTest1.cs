@@ -5,11 +5,6 @@ namespace Exercise8.Test
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [TestCase(4, 8, "Error")]
         [TestCase(9, 50, "The salary is 495$")]
         [TestCase(8, 45, "The salary is 380$")]

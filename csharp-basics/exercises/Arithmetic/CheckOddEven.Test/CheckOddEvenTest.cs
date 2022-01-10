@@ -14,7 +14,7 @@ namespace CheckOddEven.Test
         public void TheNumberIsOddOrNoup_Number_returnFalseOrTrue(int a, bool expected)
         {
             //Act
-            bool result = Exercise_2.CheckOddNumber.OddNumber(a);
+            var result = Exercise_2.CheckOddNumber.IsOddNumber(a);
             //Assert
             Assert.AreEqual(expected, result);
         }

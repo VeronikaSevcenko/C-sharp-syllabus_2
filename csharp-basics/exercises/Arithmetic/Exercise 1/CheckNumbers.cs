@@ -10,6 +10,5 @@ namespace Exercise_1
         {
             return a == 15 || b == 15 || a + b == 15 || Math.Abs(a - b) == 15;
         }
-
     }
 }

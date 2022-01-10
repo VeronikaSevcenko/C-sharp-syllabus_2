@@ -22,7 +22,7 @@ namespace Exercise_6.Test
             //Assert
             StringAssert.Contains(name, result);
             Assert.AreEqual(DividedByThree, result);
-           
+            
         }
     }
 }

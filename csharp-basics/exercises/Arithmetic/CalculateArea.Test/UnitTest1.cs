@@ -4,11 +4,6 @@ namespace CalculateArea.Test
 {
     public class GeometryTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void AreaOfCircle_RadiusIs3_Result28dot3()
         {
@@ -21,7 +16,6 @@ namespace CalculateArea.Test
 
             //Assert
             Assert.AreEqual(p, result);
-
         }
 
         [Test]

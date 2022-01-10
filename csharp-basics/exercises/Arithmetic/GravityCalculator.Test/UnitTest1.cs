@@ -4,11 +4,6 @@ namespace GravityCalculator.Test
 {
     public class GravityCalculator
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void NeedCheckFinalPositionFallingTimeIsTenInitialVelocityAndInitialPositionIsZero_Result490()
         {
