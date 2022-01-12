@@ -5,11 +5,6 @@ namespace Exercise6.Test
 {
     public class Test
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void CheckLastNumberFirstAndSecondArray_ArrayLengthFrom1To100_ResultTrue()
         {
@@ -27,7 +22,7 @@ namespace Exercise6.Test
         }
 
         [Test]
-        public void CheckIfTwoArraysIsTheSame_ArrayLengthFrom1To100_ResultTrue()
+        public void ChangeLastNumber_ArrayLengthFrom1To100_ResultTrue()
         {
             //Arrange
             int min = 1;
