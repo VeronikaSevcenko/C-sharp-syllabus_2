@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace FlightPlanner
 {
-    class Program
+    public class Program
     {
         private const string Path = "..//..//flights.txt";
 

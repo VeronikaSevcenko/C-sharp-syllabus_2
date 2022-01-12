@@ -1,17 +1,13 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using FlightPlanner;
 
 namespace FlightPlanner.Test
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void CheckTripFromAnchorage_City_ResultAvaliable()
+        public void Trip_City_ResultAvaliable()
         {
             //Arrange
             string city = "Anchorage";
