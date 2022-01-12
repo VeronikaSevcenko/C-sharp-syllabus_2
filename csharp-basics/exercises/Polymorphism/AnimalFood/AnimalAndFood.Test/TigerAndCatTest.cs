@@ -7,7 +7,7 @@ namespace AnimalAndFood.Test
     public class Tests
     {
         [Test]
-        public void SoundTiger_TigerRex_ResultROAAAAAAAAAAAAAAAAAAAR()
+        public void MakeNoise_TigerRex_ResultROAAAAAAAAAAAAAAAAAAAR()
         {
             //Arrange
             Animal animalTiger = new Tiger("Rex", "White", 168.2, 0, "Asia");
@@ -53,7 +53,7 @@ namespace AnimalAndFood.Test
         }
 
         [Test]
-        public void SoundCat_CatGarfild_ResultROAAAAAAAAAAAAAAAAAAAR()
+        public void SoundCat_CatGarfild_ResultMeowwwwWwhereIsyfoodHuman()
         {
             //Arrange
             Animal animalCat = new Cat("Garfild", "Gray", 1.8, 4, "Persian", "Flat");
