@@ -6,20 +6,20 @@ namespace Account.Test
     public class Tests
     {
         [Test]
-        public void CheckTheDeposit_AccountNameMatt_Result1000()
+        public void Deposit_AccountMattBalance1000Deposit100_Result1100Balance()
         {
             //Arrange
             Account account = new Account("Matt's account", 1000);
 
             //Act
-            var result = account.Balance();
+            var result = account.Deposit(100);
 
             //Assert
-            Assert.AreEqual(1000, result);
+            Assert.AreEqual(1100, result);
         }
 
         [Test]
-        public void CheckToString_AccountNameMattTheBalance1000_ResultMatt1000()
+        public void ToString_AccountNameMattTheBalance1000_ResultMattAccount1000()
         {
             //Arrange
             Account account = new Account("Matt's account", 1000);
@@ -32,7 +32,7 @@ namespace Account.Test
         }
 
         [Test]
-        public void CheckTransfer_AccountNameMattTheBalance1000Transfer100ToAnotherAccountWhichBalanceIs10_Result110()
+        public void Transfer_AccountNameMattTheBalance1000Transfer100ToTramphBalance10_ResultTrampBalance110()
         {
             //Arrange
             Account account1 = new Account("Matt's account", 1000);

@@ -35,12 +35,12 @@ namespace Account
             Console.WriteLine(Account_B);
             Console.WriteLine(Account_C);
 
-            Account.Transfer(Account_A, Account_B, 50.0);
-            Account.Transfer(Account_B, Account_C, 25.0);
-
             Console.WriteLine(Account_A);
             Console.WriteLine(Account_B);
             Console.WriteLine(Account_C);
+
+            Account.Transfer(Account_A, Account_B, 50.0);
+            Account.Transfer(Account_B, Account_C, 25.0);
         }
     }
 }
