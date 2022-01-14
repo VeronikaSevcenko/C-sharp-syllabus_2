@@ -18,7 +18,7 @@ namespace AnimalAndFood.Test
         }
 
         [Test]
-        public void ToStringInfo_TigerRex_ResultTiger()
+        public void ToString_TigerRex_ResultTiger()
         {
             //Arrange
             Animal animalTiger = new Tiger("Rex", "White", 168.2, 0, "Asia");
@@ -29,7 +29,7 @@ namespace AnimalAndFood.Test
         }
 
         [Test]
-        public void TheTigerEatMeat_TigerFoodMeat_ResultMeat()
+        public void Eat_TigerFoodMeat_Result8Meat()
         {
             //Arrange
             Animal animalTiger = new Tiger("Rex", "White", 168.2, 0, "Asia");
@@ -41,7 +41,7 @@ namespace AnimalAndFood.Test
         }
 
         [Test]
-        public void TigerAndVegetable_TigerFoodVegetable_ResultNotEat()
+        public void Vegetable_TigerFoodVegetable_ResultNotEat()
         {
             //Arrange
             Animal animalTiger = new Tiger("Rex", "White", 168.2, 0, "Asia");
@@ -53,7 +53,7 @@ namespace AnimalAndFood.Test
         }
 
         [Test]
-        public void SoundCat_CatGarfild_ResultMeowwwwWwhereIsyfoodHuman()
+        public void MakeNoise_CatGarfild_ResultMeowwwwWwhereIsyfoodHuman()
         {
             //Arrange
             Animal animalCat = new Cat("Garfild", "Gray", 1.8, 4, "Persian", "Flat");
@@ -64,7 +64,7 @@ namespace AnimalAndFood.Test
         }
 
         [Test]
-        public void ToStringInfo_CatGarfild_ResultCat()
+        public void ToString_CatGarfild_ResultCat()
         {
             //Arrange
             Animal animalCat = new Cat("Garfild", "Gray", 1.8, 4, "Persian", "Flat");
@@ -75,7 +75,7 @@ namespace AnimalAndFood.Test
         }
 
         [Test]
-        public void TheCatEatVegetable_CatFoodVegtable_ResultVegetable()
+        public void Vegetable_CatFoodVegtable_Result3Vegetable()
         {
             //Arrange
             Animal animalCat = new Cat("Garfild", "Gray", 1.8, 0, "Persian", "Flat");
