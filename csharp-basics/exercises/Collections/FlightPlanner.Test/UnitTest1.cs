@@ -7,7 +7,7 @@ namespace FlightPlanner.Test
     public class Tests
     {
         [Test]
-        public void Trip_City_ResultAvaliable()
+        public void NextTrip_CityCitiesAvailable_ResultWaitingNextTrip()
         {
             //Arrange
             string city = "Anchorage";
@@ -21,7 +21,7 @@ namespace FlightPlanner.Test
         }
 
         [Test]
-        public void CheckTripFromNewYork_City_ResultAvaliable()
+        public void CheckTrip_CityCitiesAvailable_ResultWaitingNextTrip()
         {
             //Arrange
             string city = "New York";
@@ -35,7 +35,7 @@ namespace FlightPlanner.Test
         }
 
         [Test]
-        public void RoundTrip_City_ResultFalse()
+        public void RoundTrip_CityCities_ResultFalse()
         {
             //Arrange
             string city = "Anchorage";
