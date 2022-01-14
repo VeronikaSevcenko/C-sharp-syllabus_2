@@ -35,23 +35,18 @@ namespace Math_Quiz
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void Start_Button_Click(object sender, EventArgs e)
@@ -110,12 +105,17 @@ namespace Math_Quiz
             }
             else if (timeLeft > 0)
             {
+               if(timeLeft == 6)
+                {
+                    TimeLeftLabel.ForeColor = Color.Red;
+                }
                 timeLeft--;
                 TimeLeftLabel.Text = timeLeft + " seconds";
             }
             else
-            
-                TimeLeftLabel.Text = "Sorry,but time is over :(";   
+            {
+                TimeLeftLabel.Text = "Sorry,but time is over :(";
+            }   
         }
 
         public bool CheckResult()
@@ -124,13 +124,10 @@ namespace Math_Quiz
                 (minus1 - minus2 == Minus.Value) &&
                 (multiply1 * multiply2 == Multiply.Value) &&
                 (division1 / division2 == Division.Value))
-            {
+
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
     }
 }
