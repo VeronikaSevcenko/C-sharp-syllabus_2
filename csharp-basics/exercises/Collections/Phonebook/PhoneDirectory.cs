@@ -13,7 +13,7 @@ namespace PhoneBook
         private int _dataCount;
 
         public PhoneDirectory() {
-            _data = new PhoneEntry[1];
+            _data = new PhoneEntry[2];
             _dataCount = 0;
         }
 

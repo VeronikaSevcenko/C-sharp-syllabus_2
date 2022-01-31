@@ -2,119 +2,107 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.RegularExpressions;
 
 namespace FlightPlanner
 {
-    class Program
+    public class Program
     {
-        private const string Path = ("../../flights.txt");
+        private const string Path = "..//..//flights.txt";
 
         private static void Main(string[] args)
         {
-            var _text = new List<string>(File.ReadAllLines(Path));
-            var city_one = new HashSet<string>();
-            var city_two = new HashSet<string>();
+            string[] AllText = File.ReadAllLines(Path);
+            List<string> tripAvailable = AllText.ToList();
 
-            foreach (var s in _text)
+            char programIsWorking = '+';
+            char choice;
+            do
             {
-                var p = s.Split('-');
-                city_one.Add(p[0]);
-            }
-            foreach (var s in _text)
-            {
-                var p = s.Split('-');
-                p[1] = p[1].Replace(">", "");
-                city_two.Add(p[1]);
-            }
+                Console.WriteLine("To display list of available trips press 1");
+                Console.WriteLine("To start your trip press 2");
+                Console.WriteLine("To exit program press #");
 
-            Console.WriteLine("What would you like to do? :");
-            Console.WriteLine("To display list of the cities press 1");
-            Console.WriteLine("To exit program press #");
-
-            var input = Console.ReadKey().KeyChar;
-            Console.WriteLine();
-
-            switch (input)
-            {
-                case '1':
-                    foreach (var s in city_one)
-                    {
-                        Console.WriteLine(s);
-                    }
-
-                    Console.WriteLine("To select a city from which you would like to start");
-                    var print = Console.ReadLine();
-                    var start_First_Country = print;
-                    foreach (var s in _text)
-                    {
-                        var p = s.Split('-');
-                        p[0] = p[0].Replace(">", "");
-                        if (p[0].Contains(print))
+                choice = Console.ReadKey().KeyChar;
+                switch (choice)
+                {
+                    case '1':
+                        Console.WriteLine("This is list of available flights: ");
+                        Console.WriteLine(string.Join("\n", tripAvailable));
+                        break;
+                    case '2':
+                        bool fly = true;
+                        int timeToFlight = 0;
+                        List<string> cities = new List<string>();
+                        Console.WriteLine("From which city would you like to start? San Jose, New York, Anchorage, Honolulu, Denver, San Francisco");
+                        string city = Console.ReadLine();
+                        cities.Add(city);
+                        while (fly)
                         {
-                            Console.WriteLine(s);
+                            Console.WriteLine(FligthPlannerProgram.Trip(city, cities));
+                            Console.Write("Where will you to fly next? ");
+                            city = Console.ReadLine();
+                            FligthPlannerProgram.checkAvailable(city, timeToFlight, tripAvailable, cities);
+                            fly = FligthPlannerProgram.RoundTrip(city, cities);
+                            timeToFlight++;
                         }
-                    }
 
-                    print = string.Empty;
-                    while(start_First_Country != print)
-                    {
-                        Console.WriteLine("What would you like to do:");
-                        Console.WriteLine("To display list of the cities press 1");
-                        Console.WriteLine("Select a city press 2");
-                        Console.WriteLine("If you want to leave the progrmm press 3");
-                        input = Console.ReadKey().KeyChar;
-                        Console.WriteLine();
+                        Console.WriteLine("Your route was " + string.Join(" -> ", cities));
+                        break;
+                    default:
+                        Console.WriteLine("Error.Try again!");
+                        break;
+                }
+            } while (programIsWorking != choice);
+        }
+    }
 
-                        if (input == 1)
-                        {
-                            Console.WriteLine("Good news! All fights is available");
-                            foreach (var s in _text)
-                            {
-                                Console.WriteLine(s);
-                            }
-                        }
-                        else if (input == 2)
-                        {
-                            Console.WriteLine();
-                            Console.WriteLine("Select a city");
+    public class FligthPlannerProgram
+    {
+        public static string Trip(string city, List<string> cities)
+        {
+            string tripDestinatinChoice = string.Empty;
+            string sanJose = "San Jose";
+            string newYork = "New York";
+            string anchorage = "Anchorage";
+            string honolulu = "Honolulu";
+            string denver = "Denver";
+            string sanFrancisco = "San Francisco";
 
-                            foreach (var s in city_one)
-                            {
-                                Console.WriteLine(s);
-                            }
-                            print = Console.ReadLine();
-                            foreach (var s in _text)
-                            {
-                                var p = s.Split('-');
-                                p[0] = p[0].Replace(">", "");
-                                if (p[0].Contains(print))
-                                {
-                                    Console.WriteLine(s);
-                                }
-                            }
+            if (city == sanJose)
+                tripDestinatinChoice = "You can fly from " + city + " to " + sanFrancisco + " or " + anchorage;
+            else if (city == newYork)
+                tripDestinatinChoice = "You can fly from " + city + " to " + anchorage + ", " + sanJose + ", " + sanFrancisco + ", " + honolulu;
+            else if (city == anchorage)
+                tripDestinatinChoice = "You can fly from " + city + " to " + newYork + " or " + sanJose;
+            else if (city == honolulu)
+                tripDestinatinChoice = "You can fly from " + city + " to " + newYork + " or " + sanFrancisco;
+            else if (city == denver)
+                tripDestinatinChoice = "You can fly from " + city + " to " + sanJose;
+            else if (city == sanFrancisco)
+                tripDestinatinChoice = "You can fly from " + city + " to " + newYork + ", " + honolulu + ", " + denver;
+            else
+                throw new ArgumentException("Error,try again");
 
-                            Console.WriteLine();
-                            Console.WriteLine("Select a city you want to travel");
-                            print = Console.ReadLine();
-                            foreach (var s in _text)
-                            {
-                                var p = s.Split('-');
-                                p[1] = p[1].Replace(">", "");
-                                if (p[0].Contains(print))
-                                {
-                                    Console.WriteLine(s);
-                                }
-                            }
-                        }
-                        else break;
-                    }
-                    break;
-                case '#':
-                    break;
-            }
+            return tripDestinatinChoice;
+        }
+
+        public static List<string> checkAvailable(string city, int flyingTimes, List<string> flightsAvailable, List<string> cities)
+        {
+            if (!flightsAvailable.Contains(cities[flyingTimes] + " -> " + city))
+                throw new ArgumentException("Not avaliable trip from " + cities[flyingTimes] + " to " + city);
+            else
+                cities.Add(city);
+
+            return cities;
+        }
+
+        public static bool RoundTrip(string city, List<string> cities)
+        {
+            bool fly = true;
+            if (cities[0] == city)
+                fly = false;
+
+            return fly;
         }
     }
 }
