@@ -8,6 +8,10 @@ namespace Account
 {
     class Program
     {
+        public static void Transfer(Account fromAccount, Account toAccount, double howMuch)
+        {
+            toAccount.Deposit(fromAccount.Withdrawal(howMuch));
+        }
         private static void Main(string[] args)
         {
             Account bartosAccount = new Account("Barto's account", 100.00);
@@ -31,9 +35,6 @@ namespace Account
             Account Account_B = new Account("B", 0);
             Account Account_C = new Account("C", 0);
 
-            Account.Transfer(Account_A, Account_B, 50.0);
-            Account.Transfer(Account_B, Account_C, 25.0);
-
             Console.WriteLine(Account_A);
             Console.WriteLine(Account_B);
             Console.WriteLine(Account_C);
@@ -41,6 +42,9 @@ namespace Account
             Console.WriteLine(Account_A);
             Console.WriteLine(Account_B);
             Console.WriteLine(Account_C);
+
+            Transfer(Account_A, Account_B, 50.0);
+            Transfer(Account_B, Account_C, 25.0);
         }
     }
 }
