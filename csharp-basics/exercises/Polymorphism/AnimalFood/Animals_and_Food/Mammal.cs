@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Animals_and_Food
 {
-    public  class Mammal : Animal
+    public abstract class Mammal : Animal
     {
         protected string _location;
 
@@ -13,14 +13,10 @@ namespace Animals_and_Food
             _location = location;
         }
 
-        public override void Eat(Food food)
+        public string GetLocation
         {
-            
-        }
-
-        public override void Display()
-        {
-            Console.WriteLine($"{_type} {_name} {_weight} {_foodEaten} {_location}");
+            get { return _location; }
+            set { _location = value; }
         }
     }
 }

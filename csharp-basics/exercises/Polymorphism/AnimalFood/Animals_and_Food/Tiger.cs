@@ -4,36 +4,31 @@ using System.Text;
 
 namespace Animals_and_Food
 {
-    class Tiger : Felime
+    public class Tiger : Felime
     {
         public Tiger(string type, string name, double weight, int foodEaten, string location) : base(type, name, weight, foodEaten, location)
         {
 
         }
 
-        public override void MakeNoise()
+        public override string MakeNoise()
         {
-            Console.WriteLine(" ROAAAAAAAAAAAAAAAAAAAR ");
+            return "ROAAAAAAAAAAAAAAAAAAAR";
         }
 
-        public override void Eat(Food food)
+        public override int Eat(Food food)
         {
-            if (food is Meat)
-            {
-                _foodEaten += food._quant;
-
-                Console.WriteLine(($"{_type} {_name} {_weight} {_foodEaten} {_location}"));
-            }
+            if (food.ToString() == "Meat")
+                GetFood += food.GetQuantity;
             else
-            {
-                Console.WriteLine($"{_type} Are not eating that type of food!");
-            }
+                throw new ArgumentException(GetAnimalType + " " + "this animal are not eating this food food!");
 
+            return GetFood;
         }
 
-        public override void Display()
+        public override string ToString()
         {
-            Console.WriteLine($"{_type} {_name} {_weight} {_foodEaten} {_location}");
+            return _type + ", " + _name + ", " + _weight + ", " + _foodEaten + ", " + _location;
         }
     }
 }

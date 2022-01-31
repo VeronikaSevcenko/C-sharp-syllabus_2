@@ -12,5 +12,11 @@ namespace Animals_and_Food
         {
             _quant = quant;
         }
+
+        public int GetQuantity
+        {
+            get { return _quant; }
+            set { _quant = value; }
+        }
     }
 }

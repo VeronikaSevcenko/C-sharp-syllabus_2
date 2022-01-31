@@ -2,18 +2,18 @@
 
 namespace DragRace
 {
-    class Maserati : ICar, IBoostable
+    public class Maserati : ICar, IBoostable
     {
         private int _currentSpeed = 0;
 
-        public void SpeedUp()
+        public int SpeedUp()
         {
-            _currentSpeed += 50;
+            return _currentSpeed += 50;
         }
 
-        public void SlowDown()
+        public int SlowDown()
         {
-            _currentSpeed -= 50;
+            return _currentSpeed -= 50;
         }
 
         public string ShowCurrentSpeed()
@@ -21,14 +21,14 @@ namespace DragRace
             return _currentSpeed.ToString();
         }
 
-        public void StartEngine()
+        public string StartEngine()
         {
-            Console.WriteLine("Run run run ");
+            return "Run run run ";
         }
 
-        public void UseNitrousOxideEngine()
+        public int UseNitrousOxideEngine()
         {
-            _currentSpeed += 100;
+            return _currentSpeed += 100;
         }
     }
 }

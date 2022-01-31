@@ -11,29 +11,22 @@ namespace Animals_and_Food
            
         }
 
-        public override void MakeNoise()
+        public override string MakeNoise()
         {
-            Console.WriteLine(" Piuuu pi pi pi piuuuu ");
+            return" Piuuu pi pi pi piuuuu ";
         }
 
-        public override void Eat(Food food)
+        public override int Eat(Food food)
         {
-            if (food is Vegetable)
-            {
-                _foodEaten += food._quant;
+            if (food.ToString() == "Vegetable" || food.ToString() == "Meat") ;
+                GetFood += food.GetQuantity;
 
-                Console.WriteLine(($"{_type} {_name} {_weight} {_foodEaten}"));
-            }
-            else
-            {
-                Console.WriteLine($"{_type} Are not eating that type of food!");
-            }
-            
-        } 
+            return GetFood;
+        }
 
-        public override void Display()
+        public override string ToString()
         {
-            Console.WriteLine($"{_type} {_name} {_weight} {_foodEaten}");
+            return _type + ", " + _name + ", " + _weight + ", " + _foodEaten + ", " + _location;
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Animals_and_Food
 {
-    class Cat : Felime
+    public class Cat : Felime
     {
         private string _breed;
 
@@ -13,21 +13,22 @@ namespace Animals_and_Food
             _breed = breed;
         }
 
-        public override void MakeNoise()
+        public override string MakeNoise()
         {
-            Console.WriteLine(" Meowwww, where is my food,human! ");
+            return" Meowwww, where is my food,human! ";
         }
 
-        public override void Eat(Food food)
+        public override int Eat(Food food)
         {
-            _foodEaten += food._quant;
+            if (food.ToString() == "Vegetable" || food.ToString() == "Meat")
+                GetFood += food.GetQuantity;
 
-            Console.WriteLine(($"{_type} {_name} {_breed} {_weight} {_foodEaten}"));
+            return GetFood;
         }
 
-        public override void Display()
+        public override string ToString()
         {
-            Console.WriteLine($"{_type} {_name} {_breed} {_weight} {_foodEaten}");
+            return _type + ", " + _name + ", " + _weight + ", " + _foodEaten + ", " + _breed + ", " + _location;
         }
     }
 }

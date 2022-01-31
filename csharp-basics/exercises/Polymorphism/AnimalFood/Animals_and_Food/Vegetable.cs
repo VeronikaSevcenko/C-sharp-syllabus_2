@@ -4,16 +4,16 @@ using System.Text;
 
 namespace Animals_and_Food
 {
-    class Vegetable : Food
+    public class Vegetable : Food
     {
         public Vegetable(int quant) : base(quant)
         {
 
         }
 
-        public string DisplayFood()
+        public override string ToString()
         {
-            return $"Vegetable {_quant}";
+            return "Vegetable";
         }
     }
 }
