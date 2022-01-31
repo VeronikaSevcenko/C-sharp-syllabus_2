@@ -8,6 +8,9 @@ namespace Math_Quiz
 {
     static class Program
     {
+        /// <summary>
+        /// The main Entry point for applications
+     
         [STAThread]
         static void Main()
         {
