@@ -1,8 +1,9 @@
 ﻿using System;
 
+
 namespace Exercise_5
 {
-    class Date
+    public class Date
     {
         private int _year;
         private int _month;
@@ -14,15 +15,15 @@ namespace Exercise_5
             _month = month;
             _day = day;
         }
-
         public int Month
         {
             get { return _month; }
             set { _month = value; }
         }
 
-        public int GetMothDate()
+        public int GetMothDate(int month)
         {
+            _month = month;
             return _month;
         }
 
@@ -32,8 +33,9 @@ namespace Exercise_5
             set { _day = value; }
         }
 
-        public int GetDayDate()
+        public int GetDayDate(int day)
         {
+            _day = day;
             return _day;
         }
 
@@ -43,14 +45,15 @@ namespace Exercise_5
             set { _year = value; }
         }
 
-        public int GetYearDate()
+        public int GetYearDate(int year)
         {
+            _year = year;
             return _year;
         }
 
-        public void DisplayDate()
+        public string DisplayDate()
         {
-            Console.WriteLine($"{_year}/{_month}/{_day}");
+            return _day + ", " + _month + ", " + _year;
         }
     }
 }
