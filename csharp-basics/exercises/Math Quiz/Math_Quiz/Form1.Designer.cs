@@ -386,7 +386,6 @@ namespace Math_Quiz
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "Math_Quiz";
             this.Text = "Math_Quiz";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Sum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Multiply)).EndInit();
