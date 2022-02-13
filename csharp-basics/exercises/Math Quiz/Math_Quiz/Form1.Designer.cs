@@ -1,6 +1,4 @@
 ﻿
-using System;
-
 namespace Math_Quiz
 {
     partial class Math_Quiz

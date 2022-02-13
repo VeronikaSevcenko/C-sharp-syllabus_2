@@ -98,14 +98,10 @@ namespace Math_Quiz
 
         public bool CheckResult()
         {
-            if ((plus1 + plus2 == Sum.Value) &&
+            return (plus1 + plus2 == Sum.Value) &&
                 (minus1 - minus2 == Minus.Value) &&
                 (multiply1 * multiply2 == Multiply.Value) &&
-                (division1 / division2 == Division.Value))
-
-                return true;
-            else
-                return false;
+                (division1 / division2 == Division.Value);
         }
     }
 }
